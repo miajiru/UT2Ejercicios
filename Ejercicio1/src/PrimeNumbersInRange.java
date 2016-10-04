@@ -11,7 +11,7 @@
 public class PrimeNumbersInRange {
 
 	public static void main(String[] args) {
-		// COMPLETA 
+		// COMPLETa
 
 	}
 
