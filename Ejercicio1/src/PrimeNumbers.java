@@ -9,7 +9,7 @@ public class PrimeNumbers {
 	            return false;
 	    }
 	    return true;
-	}
+	} 
 	
 	public static ArrayList<Integer> primesInRange(Integer from, Integer to) {
 		ArrayList<Integer> primes = new ArrayList<Integer>();

@@ -6,7 +6,7 @@ public class CalcPrimeNumbersThread extends Thread {
 	
 	public CalcPrimeNumbersThread(Integer n1,Integer n2){
 		this.num1 = n1;
-		this.num2 = n2;
+		this.num2 = n2; 
 	}
 	
 	@Override

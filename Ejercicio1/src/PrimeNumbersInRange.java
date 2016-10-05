@@ -9,7 +9,7 @@ public class PrimeNumbersInRange {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
-		
+		 
 		System.out.println("Introduce 2 números separados por espacio");
 		String limite = teclado.readLine();
 		StringTokenizer tkn = new StringTokenizer(limite," ");
