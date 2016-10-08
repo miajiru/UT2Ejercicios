@@ -22,4 +22,5 @@ public class PrimeNumbers {
 		
 		return primes;
 	}
+	
 }
