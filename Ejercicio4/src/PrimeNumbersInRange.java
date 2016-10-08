@@ -9,18 +9,18 @@ public class PrimeNumbersInRange {
 	private static ArrayList<Thread> threads = new ArrayList<Thread>(); 
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 		
 		System.out.println("Introduzca el rango de numeros a comprobar:");
 		String rangoNum = bfr.readLine();
 		StringTokenizer tkn = new StringTokenizer(rangoNum," ");
-		//Recogemos el rango de números a recorrer
+		//Recogemos el rango de nÃºmeros a recorrer
 		int num1 = Integer.parseInt(tkn.nextToken());
 		int num2 = Integer.parseInt(tkn.nextToken());
 		
-		System.out.println("Introduzca el número de threads");
+		System.out.println("Introduzca el nÃºmero de threads");
 		int thrs = Integer.parseInt(bfr.readLine());//Num de threads a lanzar
-		int rangoThreads = (int)Math.floor(num2 / thrs);//Números que recorrera cada thread
+		int rangoThreads = (int)Math.floor(num2 / thrs);//NÃºmeros que recorrera cada thread
 		num2 = rangoThreads;//Limite del primer rango de numeros
 		
 		Thread t = null;
@@ -34,14 +34,18 @@ public class PrimeNumbersInRange {
 		
 		for(int j = 0; j < threads.size(); j++){//Lanzamos los threads
 			threads.get(j).start();
+			
 			try{
-				threads.get(j).join();
+				threads.get(j).join(100);
+				if(threads.get(j).isAlive()){ //Comprobamos que el thread sigue vivo
+					threads.get(j).interrupt();	//Lo interrumpimos
+				}
 			}catch(InterruptedException e){
-				System.out.println("Thread interrumpido...");
+				System.out.println("Thread interrupido....");
 			}
 			
+				
 		}
-
 	}
 
 }

@@ -6,7 +6,7 @@ public  class CalcPrimeNumbersRunnable implements Runnable{
 	private int from;
 	private int to;
 	private Thread previous;
-
+	
 	public CalcPrimeNumbersRunnable(int id, int from, int to, Thread previous) {
 		this.id = id;
 		this.from = from;
@@ -15,8 +15,19 @@ public  class CalcPrimeNumbersRunnable implements Runnable{
     }
 	
 	@Override
-	public void run() {
-		// COMPLETAR AQUÃ� EL EJERCICIO
+	public void run(){
+		ArrayList<Integer> lista = PrimeNumbers.primesInRange(from, to);
+		
+			System.out.print("Thread "+this.id+" ------> ");
+			for(int i = 0; i < lista.size(); i++){
+				System.out.print(lista.get(i)+" / ");
+				if(Thread.interrupted()){ //Interumpimos el thread
+					System.out.println("\nThread "+this.id+" interrupido.....");
+					break;
+				}
+			}
+			System.out.println();
+		
 	}
 
 }

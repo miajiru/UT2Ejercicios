@@ -11,7 +11,7 @@ public class PrimeNumbers {
 	    return true;
 	}
 	
-	public static List<Integer> primesInRange(int from, int to) {
+	public static ArrayList<Integer> primesInRange(int from, int to) {
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		
 		for (int num=from; num<to; num++) {
@@ -21,5 +21,4 @@ public class PrimeNumbers {
 		}
 		
 		return primes;
-	}
 }
