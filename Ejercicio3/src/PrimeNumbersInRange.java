@@ -25,7 +25,7 @@ public class PrimeNumbersInRange {
 		
 		Thread t = null;
 		for(int id = 1; id <= thrs; id++){ //Instanciamos cada thread
-			Runnable r = new CalcPrimeNumbersRunnable(id,num1,num2,t);
+			Runnable r = new CalcPrimeNumbersRunnable(id num1, num2,t);
 			t = new Thread(r);
 			threads.add(t);
 			num1 = num2 + 1; //Elemento inferior del sig rango
