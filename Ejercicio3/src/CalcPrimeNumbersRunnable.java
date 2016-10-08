@@ -7,7 +7,7 @@ public class CalcPrimeNumbersRunnable implements Runnable{
 	private int to;
 	private Thread previous;
 	
-	public CalcPrimeNumbersRunnable(int id, int from, int to, Thread previous){
+	public CalcPrimeNumbersRunnable(int id, int from, int to, Thread previous) {
 		this.id = id;
 		this.from = from;
 		this.to= to;
@@ -23,5 +23,6 @@ public class CalcPrimeNumbersRunnable implements Runnable{
 		}
 		System.out.println();
 	}
-
+	
+	
 }

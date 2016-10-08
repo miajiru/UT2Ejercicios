@@ -4,11 +4,12 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class PrimeNumbersInRange {
-	
-	private static ArrayList<Thread> threads = new ArrayList<Thread>(); 
 
-	public static void main(String[] args) throws IOException {
+public class PrimeNumbersInRange {
+
+	private static ArrayList<Thread> threads = new ArrayList<Thread>(); 
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 		
 		System.out.println("Introduzca el rango de numeros a comprobar:");
@@ -43,4 +44,5 @@ public class PrimeNumbersInRange {
 		}
 		
 	}
+
 }
