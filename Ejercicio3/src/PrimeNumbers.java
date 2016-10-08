@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrimeNumbers {//Calcula y devuelve números primos
+public class PrimeNumbers {
 	
 	public static boolean isPrime(int n) {
 	    for(int i=2;i<n;i++) {
