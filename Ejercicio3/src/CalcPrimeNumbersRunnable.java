@@ -23,7 +23,5 @@ public class CalcPrimeNumbersRunnable implements Runnable {
 		}
 		System.out.println();
 	}
-	
-	
 
 }

@@ -9,7 +9,7 @@ public class PrimeNumbersInRange {
 	private static ArrayList<Thread> threads = new ArrayList<Thread>(); 
 
 	public static void main(String[] args) throws IOException {
-BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 		
 		System.out.println("Introduzca el rango de numeros a comprobar:");
 		String rangoNum = bfr.readLine();
